@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probationary Exam Management Portal - EPFO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar no-print">
+      <div class="sidebar-header">
+        <div class="logo-container">
+          <div class="logo-icon">EP</div>
+          <div class="logo-text">
+            <span class="logo-title">EPFO Portal</span>
+            <span class="logo-subtitle">RO Sangareddy</span>
+          </div>
+        </div>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#" class="menu-item active" data-tab="overview">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
+            Dashboard Overview
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item" data-tab="roster">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            Nominated Roster
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item" data-tab="checklist">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            Prep Checklist
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item" data-tab="candidates">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            DR SSA Candidates
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item" data-tab="liveops">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Live Ops Console
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item" data-tab="reports">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Reports & Printing
+          </a>
+        </li>
+      </ul>
+      
+      <div class="sidebar-footer">
+        <button class="theme-toggle-btn" id="theme-toggle-btn">
+          <svg id="theme-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+          <span id="theme-btn-text">Light Mode</span>
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="top-header no-print">
+        <div class="header-title-container">
+          <h1 id="header-view-title">Probationary Exam Dashboard</h1>
+        </div>
+        <div class="header-meta">
+          <div class="meta-pill">
+            <span class="dot" id="system-status-dot"></span>
+            <span id="system-status-label">Archived Operational Data</span>
+          </div>
+          <button class="btn" id="simulation-toggle-btn" onclick="toggleSimulation()">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Simulate Exam Day
+          </button>
+        </div>
+      </header>
+      
+      <!-- Scrollable Main View -->
+      <div class="content-body">
+        
+        <!-- ================= OVERVIEW VIEW ================= -->
+        <section id="view-overview" class="view-section active">
+          <!-- Metrics Cards Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-details">
+                <span class="metric-label">Invigilation Team</span>
+                <span class="metric-value" id="stat-staff-present">7/8</span>
+                <span class="metric-subtext">Nominated officials checked-in</span>
+              </div>
+              <div class="metric-icon-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-details">
+                <span class="metric-label">Prep Roster Progress</span>
+                <span class="metric-value" id="stat-checklist-progress">75%</span>
+                <span class="metric-subtext">Preparatory duties checked</span>
+              </div>
+              <div class="metric-icon-box success">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-details">
+                <span class="metric-label">Candidate Turnout</span>
+                <span class="metric-value" id="stat-candidate-turnout">23/25</span>
+                <span class="metric-subtext">Registered DR SSAs</span>
+              </div>
+              <div class="metric-icon-box warning">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Layout Grid -->
+          <div class="dashboard-layout-grid">
+            
+            <!-- Left Side: Order details -->
+            <div class="left-col">
+              <div class="panel-card">
+                <div class="panel-card-header">
+                  <h2 class="panel-card-title">Office Order Information</h2>
+                  <span style="font-size: 12px; color: var(--text-muted); font-weight: 500;">O.O. No. 87 of 2026</span>
+                </div>
+                <div class="document-summary-box">
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Subject</span>
+                    <span class="doc-info-val">Constitution of Team to assist the Board of Examination to conduct Probationary Examination for Direct Recruit Social Security Assistants (DR SSAs) - Regarding.</span>
+                  </div>
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Exam Dates</span>
+                    <span class="doc-info-val"><strong>29.06.2026 (Monday)</strong> and <strong>30.06.2026 (Tuesday)</strong></span>
+                  </div>
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Reporting</span>
+                    <span class="doc-info-val">Venue arrival at <strong>7:00 AM</strong> on exam days.</span>
+                  </div>
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Prep Day</span>
+                    <span class="doc-info-val">Preparatory exercise on <strong>25.06.2026</strong> scheduled by <strong>2:00 PM</strong> at the venue.</span>
+                  </div>
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Venue</span>
+                    <span class="doc-info-val"><strong>NAC Campus, Kothaguda, Hyderabad</strong></span>
+                  </div>
+                  <div class="doc-info-item">
+                    <span class="doc-info-label">Authority</span>
+                    <span class="doc-info-val">DVV Satyavathi, Assistant P.F. Commissioner (HRM), EPFO Regional Office Sangareddy.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Side: Timer & Gauges -->
+            <div class="right-col">
+              <div class="panel-card">
+                <div class="panel-card-header">
+                  <h2 class="panel-card-title" id="countdown-target-label">Archived Exam (June 2026)</h2>
+                </div>
+                <div class="countdown-box">
+                  <div class="countdown-segment">
+                    <div class="countdown-num" id="cd-days">00</div>
+                    <div class="countdown-lbl">Days</div>
+                  </div>
+                  <div class="countdown-segment">
+                    <div class="countdown-num" id="cd-hours">00</div>
+                    <div class="countdown-lbl">Hrs</div>
+                  </div>
+                  <div class="countdown-segment">
+                    <div class="countdown-num" id="cd-mins">00</div>
+                    <div class="countdown-lbl">Min</div>
+                  </div>
+                  <div class="countdown-segment">
+                    <div class="countdown-num" id="cd-secs">00</div>
+                    <div class="countdown-lbl">Sec</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel-card" style="text-align: center;">
+                <div class="panel-card-header">
+                  <h2 class="panel-card-title">Preparatory Completeness</h2>
+                </div>
+                <div class="progress-ring-container">
+                  <svg width="140" height="140">
+                    <circle cx="70" cy="70" r="60" stroke="var(--border-color)" stroke-width="8" fill="transparent" />
+                    <circle cx="70" cy="70" r="60" stroke="var(--success)" stroke-width="8" fill="transparent" 
+                            stroke-dasharray="377" stroke-dashoffset="94" id="overview-progress-ring"
+                            transform="rotate(-90 70 70)" style="transition: stroke-dashoffset 0.4s ease;" />
+                  </svg>
+                  <div class="progress-ring-text">
+                    <span class="progress-ring-percent" id="overview-progress-percent">75%</span>
+                    <span class="progress-ring-label">Done</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recent operational logs -->
+          <div class="panel-card">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Recent Operational Log Entries</h2>
+              <span class="no-print" style="cursor: pointer; color: var(--primary); font-size: 13px; font-weight: 500;" onclick="document.querySelector('[data-tab=liveops]').click()">View All Logs</span>
+            </div>
+            <div id="recent-logs-list" style="display: flex; flex-direction: column; gap: 4px;">
+              <!-- Javascript Populated -->
+            </div>
+          </div>
+        </section>
+        
+        <!-- ================= STAFF ROSTER VIEW ================= -->
+        <section id="view-roster" class="view-section">
+          <div class="panel-card">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Nominated Officials Team</h2>
+              <span style="font-size: 12px; color: var(--text-muted);">RO Sangareddy Team</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">
+              In compliance with Zonal Office Order, these 8 officials are nominated to assist the Board of Examination in the smooth conduct of the probationary examination on 29.06.2026 and 30.06.2026 at NAC Campus.
+            </p>
+            <div class="roster-grid" id="staff-roster-grid">
+              <!-- Dynamically Populated Staff Cards -->
+            </div>
+          </div>
+        </section>
+        
+        <!-- ================= PREP CHECKLIST VIEW ================= -->
+        <section id="view-checklist" class="view-section">
+          <div class="panel-card">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Preparatory Exercise Checklist</h2>
+              <span style="font-size: 12px; color: var(--text-muted);">Scheduled Date: 25.06.2026 by 2:00 PM</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 14px;">
+              Manage preparatory arrangements prior to the exams. Checking off items updates the completion dial on the main dashboard and registers events in the logs.
+            </p>
+            <div class="checklist-container" id="prep-checklist-container">
+              <!-- Dynamically populated checklist items -->
+            </div>
+          </div>
+        </section>
+        
+        <!-- ================= CANDIDATE DIRECTORY VIEW ================= -->
+        <section id="view-candidates" class="view-section">
+          <div class="panel-card">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Direct Recruit SSA Candidate Database</h2>
+              <span style="font-size: 12px; color: var(--text-muted);">Registered Candidates Directory</span>
+            </div>
+            
+            <div class="table-toolbar">
+              <div class="search-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input type="text" class="search-input" placeholder="Search by name, roll no, seat..." oninput="handleSearchInput(this.value)">
+              </div>
+              <div class="toolbar-filters">
+                <button class="filter-btn active" data-filter="all" onclick="setCandidateFilter('all')">All</button>
+                <button class="filter-btn" data-filter="present" onclick="setCandidateFilter('present')">Present</button>
+                <button class="filter-btn" data-filter="absent" onclick="setCandidateFilter('absent')">Absent</button>
+                <button class="filter-btn" data-filter="pending" onclick="setCandidateFilter('pending')">Pending</button>
+              </div>
+            </div>
+            
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Roll Number</th>
+                    <th>Candidate Name</th>
+                    <th>Attendance Status</th>
+                    <th>Lab Seating Detail</th>
+                    <th>Quick Operations</th>
+                  </tr>
+                </thead>
+                <tbody id="candidates-tbody">
+                  <!-- Dynamically populated candidates -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+        <!-- ================= LIVE OPS CONSOLE ================= -->
+        <section id="view-liveops" class="view-section">
+          <div class="panel-card">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Real-Time Examination Log Console</h2>
+              <span style="font-size: 12px; color: var(--text-muted); font-family: monospace;">OPERATIONAL STATUS: ACTIVE</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">
+              Logs crucial alerts, exam milestones, candidate check-ins, or staff updates. You can post custom status messages directly to this console logs array.
+            </p>
+            <div class="console-wrapper">
+              <div class="console-header">
+                <div class="console-status-group">
+                  <span class="console-dot"></span>
+                  <span class="console-title">LOG FEED</span>
+                </div>
+                <div style="color: var(--text-muted); font-size: 10px; font-family: monospace;">SYS_INTEGRITY: NORMAL</div>
+              </div>
+              
+              <div class="console-output" id="console-output-box">
+                <!-- Log feed lines loaded from javascript -->
+              </div>
+              
+              <div class="console-input-bar">
+                <select class="console-select" id="console-level-select">
+                  <option value="info">INFO</option>
+                  <option value="success">SUCCESS</option>
+                  <option value="warning">WARNING</option>
+                </select>
+                <input type="text" class="console-input" id="console-input-msg" placeholder="Type a custom operational log message (e.g. 'Lab A exam papers collected')..." onkeydown="if(event.key === 'Enter') postLiveLog()">
+                <button class="btn" onclick="postLiveLog()">Send Log</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- ================= REPORTS & PRINTING ================= -->
+        <section id="view-reports" class="view-section">
+          <div class="panel-card no-print">
+            <div class="panel-card-header">
+              <h2 class="panel-card-title">Generate Documents & Reports</h2>
+            </div>
+            <div class="table-toolbar" style="margin-bottom: 0;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <label style="font-size: 13px; font-weight: 500; color: var(--text-secondary);">Select Report:</label>
+                <select class="console-select" id="report-type-select" onchange="triggerReportChange()" style="background-color: var(--bg-surface); padding: 8px 12px; font-size: 13px; color: var(--text-primary);">
+                  <option value="attendance">Candidate Attendance Sheet</option>
+                  <option value="staff">Official Duty & Staff Roster</option>
+                </select>
+              </div>
+              <button class="btn" onclick="printReport()">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Print Report Sheet
+              </button>
+            </div>
+          </div>
+          
+          <div id="report-dynamic-view">
+            <!-- Printable Report populated by JS -->
+          </div>
+        </section>
+        
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
